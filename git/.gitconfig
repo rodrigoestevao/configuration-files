@@ -1,0 +1,23 @@
+[user]
+	name = [your name]
+	email = [your email address]
+
+[alias]
+	st = status
+	ci = checkin
+	co = checkout
+	br = branch
+
+[color]
+	ui = auto
+
+[core]
+	excludesfile = ~/.gitignore
+	editor = code
+	autocrlf = false
+
+[push]
+	default = simple
+
+;[url "https://"]
+;	insteadOf = git://
