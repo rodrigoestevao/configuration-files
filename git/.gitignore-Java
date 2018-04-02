@@ -1,5 +1,8 @@
 # Created by https://www.gitignore.io/api/osx,java,linux,eclipse,windows,netbeans,intellij,visualstudiocode
 
+### Custom Exclusions ###
+.attic/
+
 ### Eclipse ###
 
 .metadata
@@ -13,6 +16,11 @@ local.properties
 .settings/
 .loadpath
 .recommenders
+Servers/
+RemoteSystemsTempFiles/
+
+# SonarLint
+.sonarlint/
 
 # External tool builders
 .externalToolBuilders/
