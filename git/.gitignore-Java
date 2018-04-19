@@ -1,9 +1,28 @@
-
-# Created by https://www.gitignore.io/api/osx,linux,windows,java,gradle,maven,eclipse,netbeans,intellij,visualstudiocode
+# Created by https://www.gitignore.io/api/osx,linux,windows,compressed,java,gradle,maven,eclipse,netbeans,intellij,visualstudiocode
 
 ### Custom ###
 .attic/
 sandbox/
+
+### Compressed ###
+*.7z
+*.deb
+*.gz
+*.pkg
+*.rar
+*.rpm
+*.sit
+*.sitx
+*.tar
+*.zip
+*.zipx
+*.tgz
+*.tar.Z
+*.tar.bz2
+*.tbz2
+*.tar.lzma
+*.tlz
+
 
 ### Eclipse ###
 
@@ -18,10 +37,8 @@ local.properties
 .settings/
 .loadpath
 .recommenders
-Servers/
 RemoteSystemsTempFiles/
-
-# SonarLint
+Servers/
 .sonarlint/
 
 # External tool builders
@@ -269,4 +286,5 @@ gradle-app.setting
 # gradle/wrapper/gradle-wrapper.properties
 
 
-# End of https://www.gitignore.io/api/osx,linux,windows,java,gradle,maven,eclipse,netbeans,intellij,visualstudiocode
+# End of https://www.gitignore.io/api/osx,linux,windows,compressed,java,gradle,maven,eclipse,netbeans,intellij,visualstudiocode
+
