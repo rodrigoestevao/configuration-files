@@ -1,6 +1,7 @@
-#Thu Apr 19 20:07:01 BRT 2018
+#Thu Apr 19 20:35:03 BRT 2018
 \!/=
 /configuration/org.eclipse.core.net/org.eclipse.core.net.hasMigrated=true
+/configuration/org.eclipse.epp.mpc.ui/showOpenFavoritesNotification=false
 /configuration/org.eclipse.ui.ide/MAX_RECENT_WORKSPACES=10
 /configuration/org.eclipse.ui.ide/RECENT_WORKSPACES=/home/rodrigo/Workspace/gamify/src/api
 /configuration/org.eclipse.ui.ide/RECENT_WORKSPACES_PROTOCOL=3
@@ -218,6 +219,7 @@
 /instance/org.eclipse.epp.logging.aeri.ide/resetSendMode=KEEP
 /instance/org.eclipse.epp.logging.aeri.ide/resetSendModeOn=0
 /instance/org.eclipse.epp.logging.aeri.ide/sendMode=NOTIFY
+/instance/org.eclipse.epp.mpc.ui/CatalogDescriptor=http\://marketplace.eclipse.org
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.8
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.compliance=1.8
@@ -1035,6 +1037,8 @@
 /instance/org.springsource.ide.eclipse.commons.frameworks.core/org.springsource.ide.eclipse.commons.frameworks.ui.legacyconversion.done=true
 /instance/org.springsource.ide.eclipse.commons.ui/egit.pref.fixed.core_autoIgnoreDerivedResources=true
 /instance/org.springsource.ide.eclipse.dashboard.ui/dashboard.feed.springio.migration=true
+/instance/org.springsource.ide.eclipse.dashboard.ui/org.springsource.ide.eclipse.dashboard.uidashboard.feed.last_update=1524180326983
+/instance/org.springsource.ide.eclipse.dashboard.ui/org.springsource.ide.eclipse.dashboard.uidashboard.startup=false
 /instance/org.sweetlemonade.eclipse.json/colorArrayBracketEnabled=true
 /instance/org.sweetlemonade.eclipse.json/colorArrayBracketStyle=0
 /instance/org.sweetlemonade.eclipse.json/colorBooleanEnabled=true
@@ -1065,6 +1069,7 @@
 @org.eclipse.e4.ui.workbench.renderers.swt=0.14.102.v20180117-1153
 @org.eclipse.egit.core=4.11.0.201803080745-r
 @org.eclipse.epp.logging.aeri.ide=2.0.7.v20170906-1327
+@org.eclipse.epp.mpc.ui=1.6.4.v20180214-1800
 @org.eclipse.jdt.core=3.13.102.v20180330-0919
 @org.eclipse.jdt.launching=3.9.100.v20180323-1351
 @org.eclipse.jdt.ui=3.13.100.v20180330-0726
