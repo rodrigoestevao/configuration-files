@@ -1,4 +1,28 @@
-# Created by https://www.gitignore.io/api/osx,java,linux,eclipse,windows,netbeans,intellij,visualstudiocode
+# Created by https://www.gitignore.io/api/osx,linux,windows,compressed,java,gradle,maven,eclipse,netbeans,intellij,visualstudiocode
+
+### Custom ###
+.attic/
+sandbox/
+
+### Compressed ###
+*.7z
+*.deb
+*.gz
+*.pkg
+*.rar
+*.rpm
+*.sit
+*.sitx
+*.tar
+*.zip
+*.zipx
+*.tgz
+*.tar.Z
+*.tar.bz2
+*.tbz2
+*.tar.lzma
+*.tlz
+
 
 ### Eclipse ###
 
@@ -13,6 +37,9 @@ local.properties
 .settings/
 .loadpath
 .recommenders
+RemoteSystemsTempFiles/
+Servers/
+.sonarlint/
 
 # External tool builders
 .externalToolBuilders/
@@ -163,6 +190,20 @@ hs_err_pid*
 # .nfs files are created when an open file is removed but is still being accessed
 .nfs*
 
+### Maven ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
+!/.mvn/wrapper/maven-wrapper.jar
+
 ### NetBeans ###
 nbproject/private/
 build/
@@ -228,5 +269,22 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+### Gradle ###
+.gradle
+**/build/
 
-# End of https://www.gitignore.io/api/osx,java,linux,eclipse,windows,netbeans,intellij,visualstudiocode
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
+
+# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
+# gradle/wrapper/gradle-wrapper.properties
+
+
+# End of https://www.gitignore.io/api/osx,linux,windows,compressed,java,gradle,maven,eclipse,netbeans,intellij,visualstudiocode
+
