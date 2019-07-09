@@ -1,0 +1,6 @@
+channels:
+  - conda-canary
+  - conda-forge
+  - defaults
+channel_priority: false
+auto_update_conda: True
