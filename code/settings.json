@@ -1,6 +1,5 @@
 // Place your settings in this file to overwrite the default settings
 {
-    "editor.fontSize": 12,
     "editor.insertSpaces": true,
     "editor.renderWhitespace": "none",
     "editor.renderIndentGuides": true,
@@ -106,5 +105,10 @@
         ]
     },
     "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "editor.fontSize": 12,
+    "python.dataScience.sendSelectionToInteractiveWindow": true,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "editor.fontFamily": "'Roboto Mono', Consolas, 'Courier New', monospace",
+    "remote.WSL.fileWatcher.polling": true
 }
