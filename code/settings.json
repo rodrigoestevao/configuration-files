@@ -108,7 +108,5 @@
     "explorer.confirmDelete": false,
     "editor.fontSize": 12,
     "python.dataScience.sendSelectionToInteractiveWindow": true,
-    "workbench.colorTheme": "Visual Studio Dark",
-    "editor.fontFamily": "'Roboto Mono', Consolas, 'Courier New', monospace",
-    "remote.WSL.fileWatcher.polling": true
+    "editor.fontFamily": "Cousine, Consolas, 'Courier New', monospace"
 }
