@@ -107,6 +107,6 @@
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
     "editor.fontSize": 12,
-    "python.dataScience.sendSelectionToInteractiveWindow": true,
-    "editor.fontFamily": "Cousine, Consolas, 'Courier New', monospace"
+    "editor.fontFamily": "Cousine, Consolas, 'Courier New', monospace",
+    "editor.suggestSelection": "first"
 }
