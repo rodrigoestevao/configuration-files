@@ -123,13 +123,3 @@ if ! shopt -oq posix; then
   fi
 fi
 
-if [ -x /usr/bin/mint-fortune ]; then
-     /usr/bin/mint-fortune
-fi
-
-
-# added by Miniconda3 installer
-export PATH="/usr/local/opt/miniconda/bin:$PATH"
-. /usr/local/opt/miniconda/etc/profile.d/conda.sh
-
-export PATH="/usr/local/opt/sts-bundle/sts-3.9.3.RELEASE:$PATH"
