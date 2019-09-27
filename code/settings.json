@@ -1,12 +1,10 @@
 // Place your settings in this file to overwrite the default settings
 {
-    "editor.fontFamily": "Consolas, Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontSize": 11,
     "editor.insertSpaces": true,
     "editor.renderWhitespace": "none",
     "editor.renderIndentGuides": true,
     "editor.rulers": [
-        100
+        80
     ],
     "editor.tabSize": 4,
     "editor.trimAutoWhitespace": true,
@@ -90,29 +88,25 @@
         "**/temp/**": true,
         "**/tmp/**": true
     },
-    "vsicons.projectDetection.autoReload": true,
-    "vsicons.dontShowNewVersionMessage": true,
-    "terminal.integrated.fontFamily": "Consolas, Menlo, Monaco, 'Courier New', monospace",
-    "terminal.integrated.fontSize": 11,
-    "terminal.integrated.shell.windows": "cmd.exe",
-    "workbench.iconTheme": "vscode-icons",
+    "terminal.integrated.fontSize": 12,
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.colorTheme": "Darcula",
-    "files.associations": {
-        "*.sql": "sql"
-    },
     "git.enableSmartCommit": true,
-    "jupyter.appendResults": false,
     "emmet.triggerExpansionOnTab": true,
-    "python.pythonPath": "python.exe",
-    "python.linting.pylintEnabled": false,
-    "python.linting.pylintPath": "pylint.exe",
     "editor.minimap.enabled": false,
     "window.zoomLevel": 0,
     "[markdown]": {
         "editor.wordWrap": "on",
         "files.trimTrailingWhitespace": false
     },
+    "[python]": {
+        "editor.rulers": [
+            72,
+            79
+        ]
+    },
     "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "editor.fontSize": 12,
+    "editor.fontFamily": "Cousine, Consolas, 'Courier New', monospace",
+    "editor.suggestSelection": "first"
 }
