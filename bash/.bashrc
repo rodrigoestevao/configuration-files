@@ -10,10 +10,12 @@ esac
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
-HISTCONTROL=ignoreboth
+HISTCONTROL=ignoreboth:erasedups
 
 # append to the history file, don't overwrite it
 shopt -s histappend
+
+PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMPT_COMMAND"
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
@@ -37,7 +39,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm|xterm-color|*-256color) color_prompt=yes;;
+    xterm-color|*-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -58,15 +60,14 @@ fi
 
 if [ "$color_prompt" = yes ]; then
     if [[ ${EUID} == 0 ]] ; then
-        PS1='[\t ${debian_chroot:+($debian_chroot)}\h \W]\$ '
-        #PS1='\[\033[01;34m\][\t ${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\h\[\033[01;34m\] \W]\$\[\033[00m\] '
+        PS1='[\t ${debian_chroot:+($debian_chroot)}\h \W]\n\$ '
     else
-        PS1='[\t ${debian_chroot:+($debian_chroot)}\u@\h \w]\$ '
-        #PS1='\[\033[01;34m\][\t ${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w]\$\[\033[00m\] '
+        PS1='[\t ${debian_chroot:+($debian_chroot)}\u@\h \w]\n\$ '
     fi
+    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    PS1='[\t ${debian_chroot:+($debian_chroot)}\u@\h \w]\$ '
-    #PS1='\[\033[01;34m\][\t ${debian_chroot:+($debian_chroot)}\u@\h \w]\$ '
+    PS1='[\t ${debian_chroot:+($debian_chroot)}\u@\h \w]\n\$ '
+    #PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -74,6 +75,7 @@ unset color_prompt force_color_prompt
 case "$TERM" in
 xterm*|rxvt*)
     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h \w\a\]$PS1"
+    #PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
     ;;
 *)
     ;;
@@ -122,4 +124,5 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
 

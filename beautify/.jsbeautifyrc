@@ -7,12 +7,24 @@
 // Documentation: https://github.com/einars/js-beautify/
 // Based on Airbnb's JavaScript Style Guide, URL: https://github.com/airbnb/javascript
 {
+    "all":
+    {
+        "end_with_newline": false,
+        "eol": "\n",
+        "indent_level": 0,
+        "indent_char": " ",
+        "indent_size": 4,
+        "indent_with_tabs": false,
+        "max_preserve_newlines": 0,
+        "preserve_newlines": true,
+        "wrap_line_length": 0
+    },
     "html": {
         "allowed_file_extensions": ["htm", "html", "xhtml", "shtml", "xml", "svg", "dust", "pom"],
         "brace_style": "collapse",
         "end_with_newline": true,
         "indent_char": " ",
-        "indent_handlebars": true,
+        "indent_handlebars": false,
         "indent_inner_html": false,
         "indent_scripts": "keep",
         "indent_size": 2,
@@ -33,26 +45,57 @@
         "max_preserve_newlines": 1
     },
     "js": {
-        "allowed_file_extensions": ["js", "json", "jshintrc", "jsbeautifyrc"],
-        "brace_style": "collapse",
-        "break_chained_methods": true,
+        "allowed_file_extensions": ["js"],
+        "brace_style": "collapse,preserve-inline",
+        "break_chained_methods": false,
+        "comma_first": false,
+        "e4x": true,
+        "jslint_happy": false,
+        "keep_array_indentation": false,
+        "keep_function_indentation": false,
+        "operator_position": "before-newline",
+        "space_after_anon_function": false,
+        "space_before_conditional": true,
+        "space_in_empty_paren": false,
+        "space_in_paren": false,
+        "unescape_strings": false,
         "end_with_newline": true,
         "eval_code": false,
         "indent_char": " ",
         "indent_level": 0,
         "indent_size": 2,
         "indent_with_tabs": false,
-        "jslint_happy": false,
-        "keep_array_indentation": false,
-        "keep_function_indentation": false,
         "max_preserve_newlines": 0,
         "preserve_newlines": true,
-        "space_after_anon_function": true,
-        "space_before_conditional": true,
-        "space_in_empty_paren": false,
-        "space_in_paren": false,
-        "unescape_strings": false,
-        "wrap_line_length": 0,
-        "e4x": false
+        "wrap_line_length": 0
+    },
+    "json":
+    {
+        "allowed_file_extensions": ["json", "jshintrc", "jsbeautifyrc"],
+        "brace_style": "expand",
+        "keep_array_indentation": false,
+        "unescape_strings": false
+    },
+    "custom":
+    {
+        // Rules added here apply only to files matching specific glob strings,
+        // but respecting any whitelists or blacklists as determined by the
+        // rules specified for `global_file_rules` in the plugin settings. They
+        // take precedence over any of the settings in the categories above.
+
+        // For the following entries, keys are globs and values are objects which
+        // can contain any kind of .jsbeautifyrc setting.
+
+        "@(package?(-lock)|yarn-lock).json":
+        {
+            "indent_size": 2,
+            "brace_style": "collapse"
+        },
+
+        "*.sublime-@(settings|keymap|commands|menu)":
+        {
+            "indent_size": 4,
+            "brace_style": "expand"
+        }
     }
 }
