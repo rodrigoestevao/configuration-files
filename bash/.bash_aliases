@@ -16,11 +16,6 @@ alias la='ls -A'
 alias l='ls -Al'
 
 # 7z shortcuts
-#alias 7za='7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on'
-#alias 7zb='7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on $(date +"%Y%m%d%H%M%S")_'
-#alias 7ze='7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on -mhe=on -pabc@123'
-#alias 7zbe='7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on -mhe=on -pabc@123 $(date +"%Y%m%d%H%M%S")_'
-#alias 7zx='7z x'
 alias vi='vim -X'
 alias sassw='sass --style expanded --quiet --watch scss:css'
 
