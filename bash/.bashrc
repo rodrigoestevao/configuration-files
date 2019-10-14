@@ -10,12 +10,10 @@ esac
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
-HISTCONTROL=ignoreboth:erasedups
+HISTCONTROL=ignoreboth
 
 # append to the history file, don't overwrite it
 shopt -s histappend
-
-PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMPT_COMMAND"
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
@@ -39,7 +37,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
+    xterm|xterm-color|*-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -60,25 +58,30 @@ fi
 
 if [ "$color_prompt" = yes ]; then
     if [[ ${EUID} == 0 ]] ; then
-        PS1='[\t ${debian_chroot:+($debian_chroot)}\h \W]\n\$ '
+        PS1='$(tput sgr0)\n($(tput setaf 11)\t$(tput sgr0))-($(tput setaf 10)${debian_chroot:+($debian_chroot)}\h$(tput sgr0))-[$(tput setaf 14)\w$(tput sgr0)]\n$(tput setaf 15) => $(tput sgr0)'
+        #PS1='[\t ${debian_chroot:+($debian_chroot)}\h \W]\$ '
+        #PS1='\[\033[01;34m\][\t ${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\h\[\033[01;34m\] \W]\$\[\033[00m\] '
     else
-        PS1='[\t ${debian_chroot:+($debian_chroot)}\u@\h \w]\n\$ '
+        PS1='$(tput sgr0)\n($(tput setaf 11)\t$(tput sgr0))-($(tput setaf 10)\h$(tput sgr0))-[$(tput setaf 14)\w$(tput sgr0)]\n$(tput setaf 15)${debian_chroot:+($debian_chroot)}\u => $(tput sgr0)'
+        #PS1='[\t ${debian_chroot:+($debian_chroot)}\u@\h \w]\$ '
+        #PS1='\[\033[01;34m\][\t ${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w]\$\[\033[00m\] '
     fi
-    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    PS1='[\t ${debian_chroot:+($debian_chroot)}\u@\h \w]\n\$ '
-    #PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='\n(\t)-(\h)-[\w]\n${debian_chroot:+($debian_chroot)}\u => '
+    #PS1='[\t ${debian_chroot:+($debian_chroot)}\u@\h \w]\$ '
+    #PS1='\[\033[01;34m\][\t ${debian_chroot:+($debian_chroot)}\u@\h \w]\$ '
 fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h \w\a\]$PS1"
-    #PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
+    xterm*|rxvt*)
+        PS1='$(tput sgr0)\n($(tput setaf 11)\t$(tput sgr0))-($(tput setaf 10)\h$(tput sgr0))-[$(tput setaf 14)\w$(tput sgr0)]\n$(tput setaf 15)${debian_chroot:+($debian_chroot)}\u => $(tput sgr0)'
+        #PS1='[\t ${debian_chroot:+($debian_chroot)}\u@\h \w]\$ '
+        #PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h \w\a\]$PS1"
+        ;;
+    *)
+        ;;
 esac
 
 # enable color support of ls and also add handy aliases
@@ -124,5 +127,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-
