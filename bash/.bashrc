@@ -58,11 +58,11 @@ fi
 
 if [ "$color_prompt" = yes ]; then
     if [[ ${EUID} == 0 ]] ; then
-        PS1='$(tput sgr0)\n($(tput setaf 11)\t$(tput sgr0))-($(tput setaf 10)${debian_chroot:+($debian_chroot)}\h$(tput sgr0))-[$(tput setaf 14)\w$(tput sgr0)]\n$(tput setaf 15) => $(tput sgr0)'
+        PS1='$(tput sgr0)\n($(tput setaf 11)\t$(tput sgr0))-($(tput setaf 10)${debian_chroot:+($debian_chroot)}\h$(tput sgr0))-[$(tput setaf 14)\w$(tput sgr0)]\n$(tput setaf 15) => \[$(tput sgr0)\]'
         #PS1='[\t ${debian_chroot:+($debian_chroot)}\h \W]\$ '
         #PS1='\[\033[01;34m\][\t ${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\h\[\033[01;34m\] \W]\$\[\033[00m\] '
     else
-        PS1='$(tput sgr0)\n($(tput setaf 11)\t$(tput sgr0))-($(tput setaf 10)\h$(tput sgr0))-[$(tput setaf 14)\w$(tput sgr0)]\n$(tput setaf 15)${debian_chroot:+($debian_chroot)}\u => $(tput sgr0)'
+        PS1='$(tput sgr0)\n($(tput setaf 11)\t$(tput sgr0))-($(tput setaf 10)\h$(tput sgr0))-[$(tput setaf 14)\w$(tput sgr0)]\n$(tput setaf 15)${debian_chroot:+($debian_chroot)}\u => \[$(tput sgr0)\]'
         #PS1='[\t ${debian_chroot:+($debian_chroot)}\u@\h \w]\$ '
         #PS1='\[\033[01;34m\][\t ${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w]\$\[\033[00m\] '
     fi
@@ -76,7 +76,7 @@ unset color_prompt force_color_prompt
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
     xterm*|rxvt*)
-        PS1='$(tput sgr0)\n($(tput setaf 11)\t$(tput sgr0))-($(tput setaf 10)\h$(tput sgr0))-[$(tput setaf 14)\w$(tput sgr0)]\n$(tput setaf 15)${debian_chroot:+($debian_chroot)}\u => $(tput sgr0)'
+        PS1='$(tput sgr0)\n($(tput setaf 11)\t$(tput sgr0))-($(tput setaf 10)\h$(tput sgr0))-[$(tput setaf 14)\w$(tput sgr0)]\n$(tput setaf 15)${debian_chroot:+($debian_chroot)}\u => \[$(tput sgr0)\]'
         #PS1='[\t ${debian_chroot:+($debian_chroot)}\u@\h \w]\$ '
         #PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h \w\a\]$PS1"
         ;;
