@@ -18,6 +18,8 @@ alias l='ls -Al'
 # 7z shortcuts
 alias vi='vim -X'
 alias sassw='sass --style expanded --quiet --watch scss:css'
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
 
 function backup() {
 	if [ -n "$1" -a -d "$1" ]; then
