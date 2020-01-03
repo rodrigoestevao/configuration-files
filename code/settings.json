@@ -1,7 +1,7 @@
 {
-	"debug.console.fontSize": 12,
+	"debug.console.fontSize": 14,
 	"editor.fontFamily": "Cousine, Consolas, 'Courier New', monospace",
-	"editor.fontSize": 12,
+	"editor.fontSize": 14,
 	"editor.insertSpaces": true,
 	"editor.minimap.enabled": false,
 	"editor.renderIndentGuides": true,
@@ -76,8 +76,13 @@
 	},
 	"git.enableSmartCommit": true,
 	"python.dataScience.sendSelectionToInteractiveWindow": true,
+    "python.linting.enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.pylintCategorySeverity.convention": "Hint",
+    "python.linting.pylintCategorySeverity.warning": "Error",
+    "python.linting.flake8Enabled": true,
 	"python.jediEnabled": false,
-	"remote.WSL.fileWatcher.polling": true,
 	"search.exclude": {
 		"**/__pycache__/**": true,
 		"**/.cvs/**": true,
@@ -99,7 +104,7 @@
 		"**/temp/**": true,
 		"**/tmp/**": true
 	},
-	"terminal.integrated.fontSize": 12,
+	"terminal.integrated.fontSize": 14,
 	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 	"window.zoomLevel": 0,
 	"workbench.colorTheme": "Winter is Coming (Dark Blue - No Italics)",
