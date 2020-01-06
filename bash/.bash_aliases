@@ -21,6 +21,9 @@ alias sassw='sass --style expanded --quiet --watch scss:css'
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
+# Docker
+alias startpg='docker run --rm --name pg-docker -e POSTGRES_PASSWORD=docker -d -p 5432:5432 -v $HOME/.local/var/lib/postgresql/data:/var/lib/postgresql/data postgres'
+
 function backup() {
 	if [ -n "$1" -a -d "$1" ]; then
 		(
