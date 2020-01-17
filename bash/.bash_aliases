@@ -65,6 +65,7 @@ function backup() {
 }
 
 function reset_migration() {
+	rm -rf $(find . -path "**/__pycache__")
 	find . -path "*/migrations/*.py" -not -name "__init__.py" -delete
 	find . -path "*/migrations/*.pyc"  -delete
 	if [ $# -gt 0 -a "$1" = "new"  ]; then
