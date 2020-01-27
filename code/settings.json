@@ -54,6 +54,7 @@
 		"**/__pycache__/**": true,
 		"**/.cvs/**": true,
 		"**/.git/objects/**": true,
+		"**/.git/subtree-cache/**": true,
 		"**/.idea/**": true,
 		"**/.iml": true,
 		"**/.ipr": true,
@@ -70,6 +71,7 @@
 		"**/nbdist/**": true,
 		"**/nbproject/**": true,
 		"**/node_modules/**": true,
+		"**/venv/**": true,
 		"**/target/**": true,
 		"**/temp/**": true,
 		"**/tmp/**": true
@@ -87,6 +89,7 @@
 		"**/__pycache__/**": true,
 		"**/.cvs/**": true,
 		"**/.git/objects/**": true,
+		"**/.git/subtree-cache/**": true,
 		"**/.idea/**": true,
 		"**/.iml": true,
 		"**/.ipr": true,
