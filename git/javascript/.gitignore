@@ -1,5 +1,5 @@
-# Created by https://www.gitignore.io/api/grunt,node,linux,macos,bower,windows,intellij+all,visualstudiocode
-# Edit at https://www.gitignore.io/?templates=grunt,node,linux,macos,bower,windows,intellij+all,visualstudiocode
+# Created by https://www.gitignore.io/api/vue,bower,grunt,node,linux,macos,windows,intellij+all,visualstudiocode
+# Edit at https://www.gitignore.io/?templates=vue,bower,grunt,node,linux,macos,windows,intellij+all,visualstudiocode
 
 ### Bower ###
 bower_components
@@ -220,8 +220,16 @@ typings/
 # nuxt.js build output
 .nuxt
 
-# react / gatsby
-public/
+# rollup.js default build output
+
+# Uncomment the public line if your project uses Gatsby
+# https://nextjs.org/blog/next-9-1#public-directory-support
+# https://create-react-app.dev/docs/using-the-public-folder/#docsNav
+# public
+
+# Storybook build outputs
+.out
+.storybook-out
 
 # vuepress build output
 .vuepress/dist
@@ -235,6 +243,10 @@ public/
 # DynamoDB Local files
 .dynamodb/
 
+# Temporary folders
+tmp/
+temp/
+
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
@@ -245,6 +257,19 @@ public/
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
 .history
+
+### Vue ###
+.DS_*
+**/*.backup.*
+**/*.back.*
+
+node_modules
+
+*.sublime*
+
+psd
+thumb
+sketch
 
 ### Windows ###
 # Windows thumbnail cache files
@@ -272,4 +297,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.gitignore.io/api/grunt,node,linux,macos,bower,windows,intellij+all,visualstudiocode
+# End of https://www.gitignore.io/api/vue,bower,grunt,node,linux,macos,windows,intellij+all,visualstudiocode
