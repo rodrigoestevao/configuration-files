@@ -1,7 +1,7 @@
 {
-	"debug.console.fontSize": 14,
+	"debug.console.fontSize": 12,
 	"editor.fontFamily": "Cousine, Consolas, 'Courier New', monospace",
-	"editor.fontSize": 14,
+	"editor.fontSize": 12,
 	"editor.insertSpaces": true,
 	"editor.minimap.enabled": false,
 	"editor.renderIndentGuides": true,
@@ -77,14 +77,7 @@
 		"**/tmp/**": true
 	},
 	"git.enableSmartCommit": true,
-	"python.dataScience.sendSelectionToInteractiveWindow": true,
-    "python.linting.enabled": true,
-    "python.linting.lintOnSave": true,
-    "python.linting.pylintEnabled": false,
-    "python.linting.pylintCategorySeverity.convention": "Hint",
-    "python.linting.pylintCategorySeverity.warning": "Error",
-    "python.linting.flake8Enabled": true,
-	"python.jediEnabled": false,
+	"git.autofetch": true,
 	"search.exclude": {
 		"**/__pycache__/**": true,
 		"**/.cvs/**": true,
@@ -107,14 +100,35 @@
 		"**/temp/**": true,
 		"**/tmp/**": true
 	},
-	"terminal.integrated.fontSize": 14,
+	"terminal.integrated.fontSize": 12,
 	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 	"window.zoomLevel": 0,
 	"workbench.colorTheme": "Winter is Coming (Dark Blue - No Italics)",
 	"workbench.iconTheme": "material-icon-theme",
-    "workbench.startupEditor": "newUntitledFile",
+	"workbench.startupEditor": "none",
+	"python.dataScience.sendSelectionToInteractiveWindow": true,
+	"python.linting.enabled": true,
+	"python.linting.lintOnSave": true,
+	"python.linting.pylintEnabled": false,
+	"python.linting.pylintCategorySeverity.convention": "Hint",
+	"python.linting.pylintCategorySeverity.warning": "Error",
+	"python.linting.flake8Enabled": true,
+	"python.jediEnabled": false,
 	"[html]": {
-		"editor.insertSpaces": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true,
+		"editor.wordWrap": "on",
+		"editor.tabSize": 2
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true,
+		"editor.wordWrap": "on",
+		"editor.tabSize": 2
+	},
+	"[vue]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true,
 		"editor.wordWrap": "on",
 		"editor.tabSize": 2
 	},
@@ -127,5 +141,8 @@
 			72,
 			79
 		]
-	}
+	},
+	"liveServer.settings.donotShowInfoMsg": true,
+	"liveServer.settings.donotVerifyTags": true,
+	"prettier.singleQuote": true
 }
