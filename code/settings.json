@@ -7,7 +7,7 @@
   "editor.renderIndentGuides": true,
   "editor.renderWhitespace": "none",
   "editor.rulers": [
-	80
+	  80
   ],
   "editor.suggestSelection": "first",
   "editor.tabSize": 4,
@@ -136,14 +136,12 @@
     "editor.wordWrap": "on",
     "files.trimTrailingWhitespace": false
   },
-  "[python]": {
 	"[python]": {
 		"editor.rulers": [
 			72,
 			79
 		]
 	},
-  },
   "liveServer.settings.donotShowInfoMsg": true,
   "liveServer.settings.donotVerifyTags": true,
   "prettier.singleQuote": true
