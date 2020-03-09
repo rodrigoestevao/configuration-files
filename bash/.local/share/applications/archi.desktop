@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=Archi
+Comment=Architecture Modeling Tool
+Type=Application
+Categories=Development;Architecture;Modeling
+Exec=/home/rodrigo/.local/opt/Archi/Archi
+Terminal=false
+StartupNotify=true
+Icon=/home/rodrigo/.local/opt/Archi/icon.xpm
+Name[en_US]=Archi
