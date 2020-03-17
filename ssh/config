@@ -1,9 +1,14 @@
 # Personal
-Host Personal
+Host Github
+    HostName github.com
     User rodrigoestevao
     AddKeysToAgent yes
-    IgnoreUnknown UseKeyChain
-    UseKeyChain yes
+    IdentityFile ~/.ssh/id_rsa
+
+Host Bitbucket
+    HostName bitbuket.com
+    User rodrigoestevao
+    AddKeysToAgent yes
     IdentityFile ~/.ssh/id_rsa
 
 # Work Account
@@ -11,8 +16,6 @@ Host Work
     HostName src.tic.fgv.br
     User rodrigo.estevao
     AddKeysToAgent yes
-    IgnoreUnknown UseKeyChain
-    UseKeyChain yes
     IdentityFile ~/.ssh/work_rsa
 
 # Common Settings
