@@ -1,0 +1,6 @@
+[user]
+    name = Your Name
+    email = Your Work E-mail
+    username = Your Work Username
+[http]
+    sslVerify = false

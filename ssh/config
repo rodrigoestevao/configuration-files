@@ -1,0 +1,23 @@
+# Personal
+Host Personal
+    User rodrigoestevao
+    AddKeysToAgent yes
+    UseKeyChain yes
+    IdentityFile ~/.ssh/id_rsa
+
+# Work Account
+Host Work
+    HostName src.tic.fgv.br
+    User rodrigo.estevao
+    AddKeysToAgent yes
+    UseKeyChain yes
+    IdentityFile ~/.ssh/work_rsa
+
+# Common Settings
+Host *
+    GSSAPIAuthentication yes
+    ForwardX11Trusted yes
+    SendEnv LANG LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE LC_MONETARY LC_MESSAGES
+    SendEnv LC_PAPER LC_NAME LC_ADDRESS LC_TELEPHONE LC_MEASUREMENT
+    SendEnv LC_IDENTIFICATION LC_ALL LANGUAGE
+    SendEnv XMODIFIERS
