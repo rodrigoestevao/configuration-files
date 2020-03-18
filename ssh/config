@@ -1,17 +1,18 @@
-# Personal
+# Github: Personal
 Host Github
     HostName github.com
     User rodrigoestevao
     AddKeysToAgent yes
     IdentityFile ~/.ssh/id_rsa
 
+# Bitbucket: Personal
 Host Bitbucket
     HostName bitbuket.com
     User rodrigoestevao
     AddKeysToAgent yes
     IdentityFile ~/.ssh/id_rsa
 
-# Work Account
+# Bitbucket: FGV
 Host Work
     HostName src.tic.fgv.br
     User rodrigo.estevao
