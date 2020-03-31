@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=Freeplane
+Comment=Mindmap tool
+Type=Application
+Categories=Development;Productive;
+Exec=/home/rodrigo/.local/opt/freeplane/freeplane.sh
+Terminal=false
+StartupNotify=true
+Icon=/home/rodrigo/.local/opt/freeplane/freeplane.svg
+Name[en_US]=Freeplane
