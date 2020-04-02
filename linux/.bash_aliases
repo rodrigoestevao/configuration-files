@@ -19,18 +19,6 @@ alias sassw='sass --style expanded --quiet --watch scss:css'
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
-# Postrgres - Docker
-alias startpg='docker run --rm --name pg-docker -e POSTGRES_PASSWORD=docker -d -p 5432:5432 -v $HOME/.local/var/lib/postgresql/data:/var/lib/postgresql/data postgres'
-
-# RabbitMQ - Docker
-alias startrb='docker run -d --hostname rabbit-host --name rabbitmq -p 15672:15672 -p 5672:5672 -v $HOME/.local/var/lib/rabbitmq:/var/lib/rabbitmq rabbitmq:3-management'
-
-# Redis - Docker
-alias startrd='docker run -d -p 6379:6379 --name redis1 --restart unless-stopped -v $HOME/.local/var/lib/redis/data:/data redis'
-
-# Docker Aliases
-alias dkprune='docker volume prune -f && docker container prune -f'
-
 function backup() {
 	if [ -n "$1" -a -d "$1" ]; then
 		(
