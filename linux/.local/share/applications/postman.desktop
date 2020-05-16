@@ -1,9 +1,9 @@
 [Desktop Entry]
 Version=1.0
 Name=Postman
-Comment=Graphic API Client
+Comment=API Development Environment
 Type=Application
-Categories=Development;Testing;
+Categories=Development;API;
 Exec=/home/rodrigo/.local/opt/Postman/Postman
 Terminal=false
 StartupNotify=true
