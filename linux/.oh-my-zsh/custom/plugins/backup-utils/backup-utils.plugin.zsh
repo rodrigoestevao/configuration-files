@@ -4,7 +4,7 @@ function _echoerr() {
     cat <<< "$@" 1>&2
 }
 
-function sync_home() {
+function backup-home() {
     local home_dir=${HOME%/}
     local destination=${1%/}
     local user=$(id -u)

@@ -1,5 +1,10 @@
-# Aliases to control PostgreSQL running on Docker
+# Author: Rodrigo Estevao
+# https://github.com/rodrigoestevao/
+#
+# PostgreSQL related zsh aliases for instances running on Docker
+#
+# Use pgd as alias for Postres Docker
 
-alias startpost='docker run -d --rm --name postgres1 -e POSTGRES_PASSWORD=docker -p 5432:5432 -v ~/.local/var/lib/postgresql/postgres1/data:/var/lib/postgresql/data postgres'
-alias stoppost='docker stop postgres1'
-alias restartpost='stoppost && sleep 1 && startpost'
+alias pgdstart='docker run -d --rm --name postgres1 -e POSTGRES_PASSWORD=docker -p 5432:5432 -v ~/.local/var/lib/postgresql/postgres1/data:/var/lib/postgresql/data postgres'
+alias pgdstop='docker stop postgres1'
+alias pgdrestart='stoppost && sleep 1 && startpost'
