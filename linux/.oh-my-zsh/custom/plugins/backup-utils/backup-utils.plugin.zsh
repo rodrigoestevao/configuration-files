@@ -1,17 +1,18 @@
-#!/bin/bash
+# Authors: Rodrigo Estevao
+# https://github.com/rodrigoestevao
+#
+# Backup related zsh aliases
+#
+# Adopted bkp prefix for aliases and functions
 
-function _echoerr() {
-    cat <<< "$@" 1>&2
-}
-
-function backup-home() {
+function bkp_home() {
     local home_dir=${HOME%/}
     local destination=${1%/}
     local user=$(id -u)
     local gid=$(id -g)
 
     if [ -z "$destination" -o ! -w $destination ]; then
-        _echoerr "The destination dir is mandatory"
+        echo "The destination dir is mandatory" 1>&2
     else
         rsync -azhuW \
             --info=progress2 \
@@ -56,4 +57,3 @@ function backup-home() {
             $home_dir/ $destination/
     fi
 }
-

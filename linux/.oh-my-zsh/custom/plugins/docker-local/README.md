@@ -1,6 +1,6 @@
 # Docker (Local) plugin
 
-This plugin adds some aliases for useful Docker commands.
+This plugin adds some useful aliases and functions for [Docker](https://www.docker.com/) commands.
 
 To use it, add `docker-local` to the plugins array in your zshrc file:
 
@@ -10,6 +10,6 @@ plugins=(... docker-local)
 
 ## Aliases
 
- Alias   | Command                                               | Description                                
----------|-------------------------------------------------------|--------------------------------------------
- dkprune | `docker volume prune -f && docker container prune -f` | Clean up the unused volumes and containers 
+ Alias   | Description
+:--------|:---------------------------------------------------------------------
+ dkprune | Clean up the unused volumes and containers
