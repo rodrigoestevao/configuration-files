@@ -5,7 +5,22 @@
 #
 # Adopted py prefix for aliases and functions
 
-alias py_activate_env='source venv/bin/activate'
+function py_activate_env() {
+    local _activate=$(\
+        find . \
+        -type f \
+        -path "**/venv/bin/*" \
+        -name "activate" \
+        | \
+        head -1 \
+    )
+
+    if [ -n "${_activate}" ]; then
+        source ${_activate}
+    else
+        echo "Could not find the activation script!" 1>&2
+    fi
+}
 
 function _locate_python3() {
     local _python3=$(which python3.8)
@@ -37,38 +52,63 @@ function py_git_init() {
 function py_create_env() {
     local _python3=$(_locate_python3)
 
-    ${_python3} -m venv venv && py_git_init && py_activate_env
+    existing_env=$(\
+        find . \
+        -type d \
+        -path "**/**" \
+        \( -name "venv" -or -name "env" \)
+    )
 
-    pip install pip --upgrade --no-cache-dir
-
-    local req_file_selected=""
-    local req_file_default1="./requirements.txt"
-    local req_file_default2="./requirements/develop.txt"
-
-    if [ $# -eq 0 ]; then
-        if [ -r "${req_file_default1}" ]; then
-            req_file_selected=${req_file_default1}
-        elif [ -r "${req_file_default2}" ]; then
-            req_file_selected=${req_file_default2}
-        fi
+    # If we don't have a virtual environment yet, create it
+    if [ -z "${existing_env[@]}" -a -z "$VIRTUAL_ENV" ]; then
+        ${_python3} -m venv venv
     else
-        while getopts ":r:" opt
-        do
-            case ${opt} in
-                r )
-                    req_file_selected=$OPTARG
-                    ;;
-                \? )
-                    echo "Invalid Option: -$OPTARG" 1>&2
-                    ;;
-            esac
-        done
-        shift $((OPTIND -1))
+        echo "A virtual environment was found and will be used!"
     fi
 
-    if [ -r ${req_file_selected} ]; then
-        echo "Requiment file not informed. The environemnt will be created empty."
+    if [ $? -ne 0 ]; then
+        echo "Error when trying to initialize the virtual environment!" 1>&2
     else
-        pip install -r ${req_file_selected} --upgrade --no-cache-dir
+        # Activate the virtual environment and initialize the git repository
+        py_activate_env && py_git_init
+
+        pip install pip --upgrade --no-cache-dir
+
+        # Check if there are any requirements.txt file
+        echo -n 'Trying to locate the default requirements file...'
+
+        local req_files=$(\
+            find . \
+            -type f \
+            -path "**/**" \
+            -not -path "**/?env/**" \
+            -name "requirements.txt" \
+        )
+
+        if [ -z "${req_files[@]}" ]; then
+            echo ': NOT FOUND!'
+            echo -n 'Trying to locate the default modular requirements file...'
+
+            # TODO: Enhance the script to accept a given script (as it was before)
+
+            req_files=$(\
+                find . \
+                -type f \
+                -path "**/requirements/*" \
+                -not -path "**/?env/**" \
+                -name "develop.txt" \
+            )
+        fi
+
+        if [ -z "${req_files[@]}" ]; then
+            echo ': NOT FOUND! The environemnt will be created empty!'
+        else
+            echo ': FOUND! The environemnt will be created and initialized!'
+
+            for req_file in "${req_files[@]}"
+            do
+                pip install -r ${req_file} --upgrade --no-cache-dir
+            done
+        fi
     fi
 }
