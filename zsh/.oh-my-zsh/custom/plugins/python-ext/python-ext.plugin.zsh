@@ -1,26 +1,14 @@
 # Author: Rodrigo Estevao
 # https://github.com/rodrigoestevao/
 #
-# Python related zsh aliases
+# This plugins extends the original Python plugin embbeded on .oh-my-zsh
 #
 # Adopted py prefix for aliases and functions
 
-function py_activate_env() {
-    local _activate=$(\
-        find . \
-        -type f \
-        -path "**/venv/bin/*" \
-        -name "activate" \
-        | \
-        head -1 \
-    )
+if [ -e ${ZSH}/plugins/python/python.plugins.zsh ]; then
+    source ${ZSH}/plugins/python/python.plugins.zsh
+fi
 
-    if [ -n "${_activate}" ]; then
-        source ${_activate}
-    else
-        echo "Could not find the activation script!" 1>&2
-    fi
-}
 
 function _locate_python3() {
     local _python3=$(which python3.8)
@@ -32,7 +20,24 @@ function _locate_python3() {
     echo ${_python3}
 }
 
-function py_git_init() {
+function pyactivateenv() {
+    local _PYSEARCH_PLACES=${*:-'.'}
+    local _activate=$(\
+        find ${_PYSEARCH_PLACES} \
+            -type f \
+            -path "**/venv/bin/*" \
+            -name "activate" \
+            | head -1 \
+    )
+
+    if [ -n "${_activate}" ]; then
+        source ${_activate}
+    else
+        echo "Could not find the activation script!" 1>&2
+    fi
+}
+
+function pygitinit() {
     # Command to check if we are within a git tree
     git rev-parse --is-inside-work-tree >/dev/null 2>&1
 
@@ -49,7 +54,7 @@ function py_git_init() {
     fi
 }
 
-function py_create_env() {
+function pycreateenv() {
     local _python3=$(_locate_python3)
 
     existing_env=$(\
@@ -70,7 +75,7 @@ function py_create_env() {
         echo "Error when trying to initialize the virtual environment!" 1>&2
     else
         # Activate the virtual environment and initialize the git repository
-        py_activate_env && py_git_init
+        pyactivateenv && pygitinit
 
         pip install pip --upgrade --no-cache-dir
 
