@@ -16,7 +16,6 @@ function djcleanupmigration() {
     find ${_BASE_PATH} \
         -type f \
         -path "**/migrations/**" \
-        -name "*.py" \
         -not -path "**/data/**" \
         -not -path "**/?env/**" \
         -not -name "__init__.py" \
