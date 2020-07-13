@@ -10,10 +10,11 @@ export ZSH="/home/rodrigo/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
 ZSH_THEME="bira"
+#ZSH_THEME="amuse"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
@@ -34,7 +35,7 @@ ZSH_THEME="bira"
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
+# DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -65,12 +66,11 @@ ZSH_THEME="bira"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git postgres-docker backup-utils docker-local python-utils rabbit-docker)
-
+plugins=(git nvm sdk yarn ubuntu postgres-docker backup-utils docker-local python-ext django-ext rabbit-docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,18 +99,4 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# [RER] Read all config files
-CONFIG_DEFAULT="$HOME/.local/etc/config.d"
-if [ -e "$CONFIG_DEFAULT" ]; then
-    for config in $(ls -1 $CONFIG_DEFAULT/*.conf | sort -n -t '-' -k 1)
-    do
-        source "$config"
-    done
-fi
-
-# [RER] Custom aliases
-if [ -e $HOME/.zsh_aliases ]; then
-    source $HOME/.zsh_aliases
-fi
 
