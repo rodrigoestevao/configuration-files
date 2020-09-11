@@ -5,8 +5,8 @@
 #
 # Adopted py prefix for aliases and functions
 
-if [ -e ${ZSH}/plugins/python/python.plugins.zsh ]; then
-    source ${ZSH}/plugins/python/python.plugins.zsh
+if [ -e ${ZSH}/plugins/python/python.plugin.zsh ]; then
+    source ${ZSH}/plugins/python/python.plugin.zsh
 fi
 
 
