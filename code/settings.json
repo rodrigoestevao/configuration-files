@@ -1,6 +1,5 @@
 {
   "debug.console.fontSize": 14,
-  "editor.fontFamily": "Cousine, Consolas, 'Courier New', monospace",
   "editor.fontSize": 14,
   "editor.insertSpaces": true,
   "editor.minimap.enabled": false,
@@ -115,7 +114,6 @@
   "window.zoomLevel": 0,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "none",
-  "python.dataScience.sendSelectionToInteractiveWindow": true,
   "python.linting.enabled": true,
   "python.linting.lintOnSave": true,
   "python.linting.pylintEnabled": false,
@@ -154,7 +152,6 @@
   "liveServer.settings.donotShowInfoMsg": true,
   "liveServer.settings.donotVerifyTags": true,
   "prettier.singleQuote": true,
-  "python.dataScience.askForKernelRestart": false,
   "git.autofetch": true,
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
@@ -170,8 +167,6 @@
   "editor.emptySelectionClipboard": false,
   "rest-client.enableTelemetry": false,
   "rest-client.enableCustomVariableReferencesCodeLens": false,
-  "python.dataScience.alwaysTrustNotebooks": true,
   "todo-tree.tree.showScanModeButton": false,
-  "python.dataScience.textOutputLimit": 200000,
   "workbench.editor.pinnedTabSizing": "shrink"
 }

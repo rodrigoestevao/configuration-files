@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/rodrigo/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -70,7 +70,7 @@ DISABLE_UPDATE_PROMPT="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git nvm yarn ubuntu postgres-docker backup-utils docker-local python-ext django-ext rabbit-docker tmux)
+plugins=(git nvm yarn ubuntu postgres-docker backup-utils docker-local python-ext django-ext redis-docker spark-ext spark-jupyter)
 
 source $ZSH/oh-my-zsh.sh
 
