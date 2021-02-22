@@ -4,3 +4,9 @@
     username = Your Work Username
 [http]
     sslVerify = false
+# [sendemail]
+#     smtpencryption = tls
+#     smtpserver = smtp.gmail.com
+#     smtpuser = your@gmail.com
+#     smtppass = password
+#     smtpserverport = 587	postBuffer = 157286400

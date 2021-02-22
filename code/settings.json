@@ -1,6 +1,6 @@
 {
-  "debug.console.fontSize": 14,
-  "editor.fontSize": 14,
+  "debug.console.fontSize": 12,
+  "editor.fontSize": 12,
   "editor.insertSpaces": true,
   "editor.minimap.enabled": false,
   "editor.renderIndentGuides": true,
@@ -109,9 +109,8 @@
     "**/tmp/**": true,
     "**/venv/**": true
   },
-  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontSize": 12,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "window.zoomLevel": 0,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "none",
   "python.linting.enabled": true,
@@ -163,10 +162,13 @@
       "-Xmx1024m",
       "-DPLANTUML_LIMIT_SIZE=10240"
   ],
-  "python.languageServer": "Microsoft",
+  "python.languageServer": "Pylance",
   "editor.emptySelectionClipboard": false,
   "rest-client.enableTelemetry": false,
   "rest-client.enableCustomVariableReferencesCodeLens": false,
   "todo-tree.tree.showScanModeButton": false,
-  "workbench.editor.pinnedTabSizing": "shrink"
+  "workbench.editor.pinnedTabSizing": "shrink",
+  "python.analysis.typeCheckingMode": "basic",
+  "vsintellicode.features.python.deepLearning": "enabled",
+  "rest-client.fontSize": 12
 }

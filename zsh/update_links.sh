@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BASE_DIR=~/Workspace/rer/projects/configuration-files/zsh/.oh-my-zsh/custom/plugins
+BASE_DIR=~/Workspace/rer/configuration-files/zsh/.oh-my-zsh/custom/plugins
 ZSH_CUSTOM=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}
 
 mkdir -p $ZSH_CUSTOM/plugins/backup-utils    2>&1 >/dev/null
