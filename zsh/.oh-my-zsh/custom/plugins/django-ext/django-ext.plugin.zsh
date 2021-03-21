@@ -11,6 +11,12 @@ fi
 
 function djcleanupmigration() {
     local _BASE_PATH=${*:-'.'}
+    local _MANAGE_PY=`find ${_BASE_PATH} -type f -name manage.py`
+
+    if [ -e ${_MANAGE_PY} ]; then
+        python3 ${_MANAGE_PY} flush --noinput
+    fi
+
     find ${_BASE_PATH} -type f -name "*.py[co]" -not -path "**/?env/**" -delete
     find ${_BASE_PATH} -type d -name "__pycache__" -not -path "**/?env/**" -delete
     find ${_BASE_PATH} \
