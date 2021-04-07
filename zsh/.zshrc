@@ -7,6 +7,7 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/rodrigo/.oh-my-zsh"
@@ -78,8 +79,9 @@ DISABLE_UPDATE_PROMPT="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=( \
-  git nvm yarn ubuntu postgres-docker vscode virtualenv python-ext \
-  django-ext docker-local redis-docker spark-ext spark-jupyter \
+  git github gitignore nvm yarn ubuntu postgres-docker vscode virtualenv \
+  pip python-ext django-ext docker docker-compose docker-local redis-docker \
+  spark-ext spark-jupyter ssh-agent \
 )
 
 source $ZSH/oh-my-zsh.sh
