@@ -25,7 +25,7 @@ ZSH_THEME=powerlevel10k/powerlevel10k
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -79,9 +79,10 @@ DISABLE_UPDATE_PROMPT="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=( \
-  git github gitignore nvm yarn ubuntu postgres-docker vscode virtualenv \
-  pip python-ext django-ext docker docker-compose docker-local redis-docker \
-  spark-ext spark-jupyter ssh-agent \
+  git github gitignore nvm yarn ubuntu vscode virtualenv pip docker \
+  docker-compose ssh-agent \
+  # Custom Plugins
+  mongodb shell-utils python-ext spark-jupyter \
 )
 
 source $ZSH/oh-my-zsh.sh
