@@ -82,7 +82,7 @@ plugins=( \
   git github gitignore nvm yarn ubuntu vscode virtualenv pip docker \
   docker-compose ssh-agent \
   # Custom Plugins
-  mongodb shell-utils python-ext spark-jupyter \
+  docker-local mongodb shell-utils python-ext spark-jupyter \
 )
 
 source $ZSH/oh-my-zsh.sh
