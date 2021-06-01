@@ -80,7 +80,7 @@ DISABLE_UPDATE_PROMPT="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=( \
   git github gitignore nvm yarn ubuntu vscode virtualenv pip docker \
-  docker-compose ssh-agent \
+  docker-compose ssh-agent sdk \
   # Custom Plugins
   docker-local mongodb shell-utils python-ext spark-jupyter \
 )
