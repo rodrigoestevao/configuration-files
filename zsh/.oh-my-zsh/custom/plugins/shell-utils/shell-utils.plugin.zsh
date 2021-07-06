@@ -5,5 +5,7 @@ alias ll='ls -lh --group-directories-first'
 alias la='ls -lAh --group-directories-first'
 
 # Copy the content to clipboard
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
+if [ ! -e $(which pbcopy) ]; then
+    alias pbcopy='xclip -selection clipboard'
+    alias pbpaste='xclip -selection clipboard -o'
+fi

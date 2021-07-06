@@ -13,7 +13,6 @@
   "editor.trimAutoWhitespace": true,
   "editor.wordWrap": "off",
   "emmet.triggerExpansionOnTab": true,
-  "emmet.includeLanguages": {"django-html": "html"},
   "explorer.autoReveal": false,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
@@ -76,14 +75,11 @@
     "**/venv/**": true,
     "**/target/**": true,
     "**/temp/**": true,
+    "**/plugins/**": true,
     "**/tmp/**": true
   },
   "files.associations": {
-    "**/*.html": "html",
-    "**/templates/**/*.html": "django-html",
-    "**/templates/**/*": "django-txt",
-    "**/requirements{/**,*}.{txt,in}": "pip-requirements",
-    "*.json": "json"
+    "**/requirements{/**,*}.{txt,in}": "pip-requirements"
   },
   "git.enableSmartCommit": true,
   "search.exclude": {
@@ -107,9 +103,33 @@
     "**/target/**": true,
     "**/temp/**": true,
     "**/tmp/**": true,
+    "**/plugins/**": true,
     "**/venv/**": true
   },
   "terminal.integrated.fontSize": 12,
+  "terminal.integrated.profiles.linux": {
+    "zsh -l": {
+      "path": "/bin/zsh",
+      "args": ["-l"]
+    },
+    "bash -l": {
+      "path": "/bin/bash",
+      "args": ["-l"]
+    }
+  },
+  "terminal.integrated.profiles.osx": {
+    "zsh -l": {
+      "path": "/bin/zsh",
+      "args": ["-l"]
+    }
+  },
+  "terminal.integrated.profiles.windows": {
+    "PowerShell -NoProfile": {
+      "source": "PowerShell",
+      "args": ["-NoProfile"]
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell -NoProfile",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "none",
@@ -120,6 +140,12 @@
   "python.linting.pylintCategorySeverity.warning": "Error",
   "python.linting.flake8Enabled": true,
   "python.formatting.blackArgs": ["--line-length", "79"],
+  "[django-html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false,
+    "editor.wordWrap": "on",
+    "editor.tabSize": 2
+  },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
@@ -151,13 +177,12 @@
   "liveServer.settings.donotShowInfoMsg": true,
   "liveServer.settings.donotVerifyTags": true,
   "prettier.singleQuote": true,
-  "git.autofetch": true,
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "plantuml.exportFormat": "png",
   "plantuml.diagramsRoot": "docs/diagrams/src/",
-  "plantuml.exportOutDir": "assets/imgs/",
+  "plantuml.exportOutDir": "docs/diagrams/imgs/",
   "plantuml.commandArgs": [
       "-Xmx1024m",
       "-DPLANTUML_LIMIT_SIZE=10240"
@@ -166,9 +191,25 @@
   "editor.emptySelectionClipboard": false,
   "rest-client.enableTelemetry": false,
   "rest-client.enableCustomVariableReferencesCodeLens": false,
-  "todo-tree.tree.showScanModeButton": false,
   "workbench.editor.pinnedTabSizing": "shrink",
   "python.analysis.typeCheckingMode": "basic",
   "vsintellicode.features.python.deepLearning": "enabled",
-  "rest-client.fontSize": 12
+  "rest-client.fontSize": 12,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "yaml.schemas": {
+    "file:///toc.schema.json": "/toc\\.yml/i"
+  },
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "[ ]",
+    "[x]"
+  ],
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "redhat.telemetry.enabled": true
 }
